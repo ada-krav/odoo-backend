@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!--    You`ll need to define parent if you want People to be sub-item in menu -->
+    <menuitem id="menu_people_root"
+              name="People"
+              sequence="10" />
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="people_person_list_view">
+            <field name="name">people.person.list</field>
+            <field name="model">people.person</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="full_name"/>
+                    <field name="age"/>
+                    <field name="sex"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="people_person_action">
+            <field name="name">People</field>
+            <field name="res_model">people.person</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+    <data>
+        <record model="ir.ui.view" id="people_person_form_view">
+            <field name="name">people.person.form</field>
+            <field name="model">people.person</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="full_name"/>
+                            <field name="birthday"/>
+                            <field name="age" readonly="1"/>
+                            <field name="sex"/>
+                            <field name="company_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
